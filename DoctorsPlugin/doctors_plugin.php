@@ -314,17 +314,17 @@ function custom_doctors_column( $column, $post_id ) {
     }
 }
 
-//add custom template for archive page
-add_filter('archive_template', 'get_archive_doctors_template');
-function get_archive_doctors_template($template) {
-    global $post;
-    //$plugin_root_dir = plugin_dir_url(__FILE__).'/DoctorsPlugin/';
+// //add custom template for archive page
+// add_filter('archive_template', 'get_archive_doctors_template');
+// function get_archive_doctors_template($template) {
+//     global $post;
+//     //$plugin_root_dir = plugin_dir_url(__FILE__).'/DoctorsPlugin/';
    
-    if (is_post_type_archive('doctors')) {
-        $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/page-templates/archive-doctors.php';
-    }
-    return $template;
-}
+//     if (is_post_type_archive('doctors')) {
+//         $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/page-templates/archive-doctors.php';
+//     }
+//     return $template;
+// }
 
 function load_cpt_archive_template($template){
     global $post;
