@@ -93,45 +93,24 @@
 
 
 
-/*doctors archive*/
-.wrap-doctors-archive #doctors-title{
+/**************************************************************************************************
+**************************************doctors archive**********************************************/
+.wrap-doctors-archive #doctors-title{               /*  title  */
     padding-top: 50px;
     text-align: center;
 }
 .wrap-doctors-archive #doctors-title h1{
     font-size: 4.5em;
     margin-bottom:0;
-    background-color: white!important;
+    background-color:transparent;
 }
-/* .wrap #primary.content-area .doctor-title h1{
-    font-size: 3.5em;
-    text-align: center;
-    padding-top:10px;
-    margin-bottom:0;
-} */
 
-.wrap-doctors-archive .doctors-archive-content{
-    background:white;
+.wrap-doctors-archive .doctors-archive-content{    
+    background:transparent;
     padding:30px;
     margin-left:100px;
     margin-right:100px;
 }
-
-/* .doctors-archive{
-    background:white!important;
-    padding:30px!important;
-    margin-left:100px!important;
-    margin-right:100px!important;
-} */
-
-/* .site-content-contain .site-content  #doctors-title{
-    padding-top:10px!important;
-    width:100%!important;
-    font-size: 3.5em!important;
-    height: auto!important;
-    text-align: center!important;
-    background-color: white!important;
-}  */
 
 hr.solid {
     text-align:center!important;
@@ -139,7 +118,14 @@ hr.solid {
     border-top: 3px solid black!important;
   }
 
-  .wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column{
+  /* .wrap-doctors-archive .doctor-archive-content .doctor-archive-row {
+    display:flex;
+  } */
+
+
+
+  .wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column{     /*    doctor column      */
+    /* flex:30%; */
     padding-bottom:30px;
     display:block;
     float:left;
@@ -162,19 +148,7 @@ hr.solid {
     clear: both;
 }
 
-/* .doctors-archive > .row > .column {    
-    height:fit-content!important;
-    background-color: white!important;
-    text-align: center!important;
-    border-style: solid!important;
-    border-color: cornflowerblue!important;
-    float: left!important;
-    width: 30%!important;
-    margin-bottom: 80px!important;
-    contain:content!important;
-    margin-left:10px!important;
-    margin-right:10px!important;
-} */
+
 
 .wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column .image{
     min-height: 300px;
@@ -185,13 +159,10 @@ hr.solid {
 
 
 
-/* .doctors-archive .image img{
-    height:300px!important;
-    width: 50%!important;
-} */
 
 .wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column .doctor-name{
-    font-size: 2vw;
+    height:60px;
+    font-size: 1.5vw;
     font-weight: 500;
     border-bottom: 2px solid black;
 }
@@ -203,11 +174,6 @@ hr.solid {
     border-bottom: 2px solid black;
     overflow-x: auto;
 }
-/* 
-.doctor-archive-table{
-    padding-top: 1.5em!important;
-    border-top: 2px solid black!important;
-} */
 
 
 .wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column .doctor-archive-table td{
@@ -215,23 +181,17 @@ hr.solid {
     text-align: left!important;
 }
 
-/* .doctor-archive-table th {
-    text-align: right!important;
-}
-
-.doctor-archive-table td {
-    padding-left: 10%!important;
-    text-align: left!important;
-} */
-
 .doctor-info-button{
     background-color:rgb(68, 118, 184)!important;
     font-size: 12px!important;
     margin-bottom: 1em!important;
 }
-
-.wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column a:link{
-
+.wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column .link-box{
+    margin-top:5%;
+    height:100%;
+    flex:100%;
+}
+.wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column .link-box a:link{
     text-align: center;
     vertical-align:middle;
     padding:10px;
@@ -255,6 +215,10 @@ hr.solid {
     float:right!important;
 }
 
+
+/*********************************************************/
+/*              responsive for archive                   */
+/*********************************************************/
 
 @media only screen and (max-width: 1300px) {
     .wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column{
@@ -314,6 +278,9 @@ hr.solid {
 }
 
 .wrap #primary.content-area .doctor-card{
+    margin: auto;
+    margin-top: 5%;
+    padding: 10px;
     contain:content;
     border-style: solid;
     border-width: 3px;
@@ -324,7 +291,6 @@ hr.solid {
     height:280px;
     width:600px;
     min-width:600px;
-    padding:10px 0px 0px 10px;
 }
 
 .content-area .doctor-card > div {
@@ -410,71 +376,11 @@ ul.recent-doctors .single-doctor-widget .doctor-widget-info{
     width:70%;
 }
 ul.recent-doctors .single-doctor-widget .doctor-widget-thumbnail{
-    width:30%;
+    height:100px;
+    width:100px;
 }
 ul.recent-doctors .single-doctor-widget:after{
     content: "";
     display: table;
     clear: both;
 }
-
-/* @media only screen and (max-width: 1600px) {
-
-    .wrap > .content-area{
-        width:100%!important;
-    }
-    .widget-area{
-    margin-top:-350px;
-    margin-right:200px;
-    }
-}
-@media only screen and (max-width: 1300px) {
-
-    .wrap > .content-area{
-        width:90%!important;
-    }
-    .widget-area{
-        margin-right:150px!important;
-        width:20%!important
-    }
-}
-@media only screen and (max-width: 1000px) {
-
-    .wrap, .wrap > .content-area{
-        width:100%!important;
-    }
-    .widget-area{
-        margin-left:100px!important;
-        margin-right:0!important;
-        margin-top:150px!important;
-        width:80%!important;
-        float: none!important;
-        align-content: center;
-    }
-    .wrap .content-area .doctor-info{
-        font-size: 1em;
-    }
-    .wrap .content-area .single-doctor-table{
-        font-size:1.2em;
-    }
-}
-@media only screen and (max-width: 765px) {
-
-    .wrap > .content-area{
-        width:100%!important;
-    }
-    .widget-area, #block-2{
-        margin-right:0!important;
-        width:100%!important
-    }
-}
-@media only screen and (max-width: 600px) {
-
-    .wrap > .content-area{
-        width:100%!important;
-    }
-    .widget-area{
-        margin-right:0!important;
-        width:100%!important
-    }
-} */
