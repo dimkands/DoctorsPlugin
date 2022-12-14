@@ -64,7 +64,13 @@ class DoctorWidget extends WP_Widget
             <?php  while ($r->have_posts()) : $r->the_post(); ?> <!-- while doctors exist create li elements with info -->
             <li>
                 <div class="single-doctor-widget"><a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
-                    <div class="doctor-widget-thumbnail"><?php the_post_thumbnail( array(100, 100));?> </div>
+                <?php 
+                    if ( has_post_thumbnail() ) { ?>
+						<div class="doctor-widget-thumbnail"><?php the_post_thumbnail(array(100, 100)); ?></div><?php
+                    }
+					else  { ?>
+						<img width="100" height="100" class="doctor-widget-thumbnail" src="<?php echo plugin_dir_url( dirname( __FILE__ ) ) . 'assets/doctor_placeholder.jpg'; ?>"></img>
+					<?php } ?>
                     <div class="doctor-widget-info">
                         <div class="doctor-widget-name"><?php if ( get_the_title() ) the_title(); else the_ID(); ?> </div>
                         <div class="doctor-widget-specialty"><?php echo get_post_meta(get_the_ID(), '_doctor_specialty_key', true ); ?> </div>
