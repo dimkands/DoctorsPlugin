@@ -10,7 +10,8 @@ get_header();
         <div class="doctor-title">
             <h1>Doctor Info</h1>
             <hr class="title-seperator">
-        </div><?php
+        </div>
+        <div><a href="<?php echo get_post_type_archive_link('doctors') ?>"><-Επιστροφή στους Γιατρούς</a></div><?php
         while ( have_posts() ) :the_post();
             ?>
             <div class="doctor-card"><?php
@@ -46,6 +47,6 @@ get_header();
         endwhile;
 ?>  </div>
 </div>
-    <?php get_sidebar(); 
+<?php get_sidebar(); 
 
 get_footer();
