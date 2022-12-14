@@ -1,21 +1,12 @@
-
-
 <?php get_header();?>
 <div class="wrap-doctors-archive">
 	<div class="title-col" id="doctors-title"> <h1>Doctors Archive</h1></div>
 	<div class="doctors-archive-content">
-	<?php if(is_active_sidebar(get_sidebar())){
-			$width = 50;
-		}
-		else{
-			$width = 30;
-		}
-		?>
-		<div class="doctors-archive-row">
+ 		<div class="doctors-archive-row">
 		<?php
 		if (have_posts()):		
 			while (have_posts()) :the_post();?>
-					<div class="doctors-archive-column" style="width:<?php echo esc_attr($width)?>%">	
+				<div class="doctors-archive-column">	
 					<div class="doctor-name"><?php the_title(); ?></div><?php
 					if ( has_post_thumbnail() ) {?>
 						<img class="doctor-image"><?php the_post_thumbnail(array(300, 300)); ?></img>
@@ -42,7 +33,7 @@
 						</tr>
 					</table>
 					<?php $post_link = get_post_permalink($post -> ID); ?>
-					<a class="doctor-single-page" href="<?php echo esc_attr($post_link)?>">Σελίδα Γιατρού</a>
+					<div class="link-box"><a class="doctor-single-page" href="<?php echo esc_attr($post_link)?>">Σελίδα Γιατρού</a></div>
 				</div>		
 			<?php endwhile;				
 		endif;
@@ -50,10 +41,11 @@
 		?>
 		</div>
 		<div class="container-pagination">
-		<div class="newer-entries"><?php previous_posts_link('«Newer Entries',0);?></div> 
-		<div class="older-entries"><?php next_posts_link( 'Older Entries »', 0 );?></div> 
-	</div>
+			<div class="newer-entries"><?php previous_posts_link('«Newer Entries',0);?></div> 
+			<div class="older-entries"><?php next_posts_link( 'Older Entries »', 0 );?></div> 
+		</div>
 	<?php wp_reset_postdata();?>
 </div>
- <?php get_sidebar(); 
-  get_footer(); 
+<?php 
+get_sidebar();
+get_footer(); 
