@@ -95,6 +95,17 @@
 
 /**************************************************************************************************
 **************************************doctors archive**********************************************/
+
+#content > #primary > #main > .wrap-doctors-archive{
+    width:80%;
+    float:left;
+}
+
+#content > #primary > #main > #sidebar{
+    width:20%;
+    float:left;
+}
+
 .wrap-doctors-archive #doctors-title{               /*  title  */
     padding-top: 50px;
     text-align: center;
@@ -169,6 +180,7 @@ hr.solid {
 
 
 .wrap-doctors-archive .doctors-archive-content .doctors-archive-row .doctors-archive-column .doctor-archive-table{
+    width:100%;
     padding-top: 1.5vw;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -267,7 +279,7 @@ hr.solid {
     padding-bottom: 50px;
 }
 #primary.content-area{
-    width: 70%!important;
+    width: 100%!important;
 }
 
 .wrap #primary.content-area .doctor-title h1{
@@ -322,7 +334,7 @@ hr.solid {
 @media only screen and (max-width: 1000px) {
 
     #primary.content-area{
-        width:80%!important;
+        width:100%!important;
     }
 }
 @media only screen and (max-width: 830px) {
@@ -339,7 +351,7 @@ hr.solid {
 @media only screen and (min-width: 999px) {
 
     #primary.content-area{
-        width:80%!important;
+        width:100%!important;
     }
 }
 @media only screen and (max-width: 830px) {

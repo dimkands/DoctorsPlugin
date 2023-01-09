@@ -44,6 +44,7 @@
 			<div class="newer-entries"><?php previous_posts_link('«Newer Entries',0);?></div> 
 			<div class="older-entries"><?php next_posts_link( 'Older Entries »', 0 );?></div> 
 		</div>
+	</div>	
 	<?php wp_reset_postdata();?>
 </div>
 <?php 
